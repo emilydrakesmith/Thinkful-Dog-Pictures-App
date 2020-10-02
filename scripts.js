@@ -1,3 +1,5 @@
+
+
 /*    Pseudocode
  *       1. Render page with header, form, and initial two buttons in form.
  *       2. Clicking a button reveals its input field; hides/clears other field.
@@ -27,7 +29,7 @@ function genForm() {
                 <div id="user-input-objs">
                     <div id="input-buttons">
                         <input type="button" id='btn-mixitup' value="Mix it Up!"></input>             <!--- Button 1: "Mix it Up" --->
-                        <input type="button" id='btn-letmechoose' class='hide' value="Let Me Choose!"></input>         <!--- Button 1: "Mix it Up" --->
+                        <input type="button" id='btn-letmechoose' value="Let Me Choose!"></input>         <!--- Button 1: "Mix it Up" --->
                     </div>
                     <div id="input-field">
                     </div>
@@ -41,23 +43,28 @@ function genForm() {
 }
 
 function genInputNumber() {
-    return  `<label for='input-quant'>'How many dogs do you want to see?'</label>
-             <input type="text" class="user-input-box" id='input-quant' name='quant' placeholder='Enter a 1 - 50 number, eg: 3'></input>`;
-}
-
-function genInputBreed() {
     return  `<label for='${formFieldFor}'>${formFieldLabel}</label>
              <input type="text" class="user-input-box" id='${formFieldId}' name='${formFieldName}' placeholder='${formFieldPlaceholder}'></input>`;
 }
 
-function genResults(responseJson) {
-    console.log('func genResults called')
-    let outputString = '';
+function genInputBreed() {
+    return  `<label for='${formFieldFor}'>${formFieldLabel}</label>
+             <select class="user-input-box" id='${formFieldId}' name='${formFieldName}'>${breedsList}</select>`;
+}
 
-    for(i=0; i<responseJson.message.length; i++) {
+function genResults(responseJson) {
+    console.log('func genResults called');
+    let outputString = '';
+    if ($('#btn-mixitup').hasClass('active-path')) {
+        for(i=0; i<responseJson.message.length; i++) {
+            outputString += `<section id="show-dogs-here">
+                                <img src=${responseJson.message[i]}>
+                            </section>`;
+        }
+    } else {
         outputString += `<section id="show-dogs-here">
-                            <img src=${responseJson.message[i]}>
-                        </section>`;
+                                <img src=${responseJson.message}>
+                            </section>`;
     }
     return outputString;       
 }
@@ -86,27 +93,39 @@ function renderResults(responseJson) {
 
 function searchType() {
     $('main').on('click', '#btn-mixitup', function(event) {
+        $(this).addClass('active-path');
+        $(this).siblings().removeClass('active-path');
+        $('#get-dogs-form').find('#btn-submit').addClass('hide')
         mixItUp();
     })
     $('main').on('click', '#btn-letmechoose', function(event) {
+        $(this).addClass('active-path');
+        $(this).siblings().removeClass('active-path');
+        $('#get-dogs-form').find('#btn-submit').removeClass('hide')
         letMeChoose();
     })
 }
 
 function textInput() {
     $('#get-dogs-form').on('keyup', '.user-input-box', function(event) {
-        if ($('#input-quant').val() != "") {
+        if ($('.user-input-box').val() != "") {
             $('#get-dogs-form').find('#btn-submit').removeClass('hide');
+            $('#get-dogs-form').find('#btn-submit').prop('disabled', false);
         } else {
-            $('#get-dogs-form').find('#btn-submit').prop('disabled', true)
+            $('#get-dogs-form').find('#btn-submit').prop('disabled', true);
+            textInput();
         }
     })
 }
 
 function submitClick() {
     $('#get-dogs-form').on('submit', function(event) {
-        event.preventDefault();    
-        getDogImageRandom();    
+        event.preventDefault();
+        if ($('#btn-mixitup').hasClass('active-path')) {
+            getDogImageRandom();
+        } else {
+            getDogImageBreed();
+        }
     })
 }
 
@@ -133,9 +152,14 @@ function letMeChoose() {
 /* ------ API Request Functions ------ */
 
 function getDogImageRandom() {
-    console.log('func getDogImageRandom is being called')
-    console.log((`https://dog.ceo/api/breeds/image/random/${$('#input-quant').val()}`))
     fetch(`https://dog.ceo/api/breeds/image/random/${$('#input-quant').val()}`)
+    .then(response => response.json())
+    .then(responseJson => renderResults(responseJson))
+        .catch(error => alert('Something went wrong. Try again later.'));
+}
+
+function getDogImageBreed() {
+    fetch(`https://dog.ceo/api/breed/${$('#input-breed').val()}/images/random`)
     .then(response => response.json())
     .then(responseJson => renderResults(responseJson))
         .catch(error => alert('Something went wrong. Try again later.'));
