@@ -1,0 +1,33 @@
+body {
+    font-family: sans-serif;
+}
+
+main {
+    margin-left: 15px;
+}
+
+#get-dogs-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#user-input-objs {
+    display: flex;
+    flex-direction: row;
+}
+
+#input-buttons {
+    display: flex;
+    flex-direction: column;
+    /*flex: 2;*/
+}
+
+#input-field {
+    display: flex;
+    flex-direction: column;
+    /*flex: 5;*/
+}
+
+.hide {
+    visibility: hidden;
+}
