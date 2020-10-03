@@ -20,7 +20,7 @@ See *Appendix A: Assignment from Thinkful Module 12.5* for more information.
 
 # Version Notes
 
-The version of this app currently uploaded is 1.0.1.  I do not track updates to this README file if there were not associated changes to any other part of the app.  Each version number will lack a commit number until the next version is uploaded.  The commit number is always added retroactively as it's generated at the time that I commit the project to the host.  In general, for version number format X.Y.Z:
+The version of this app currently uploaded is 1.1.0.  I do not track updates to this README file if there were not associated changes to any other part of the app.  Each version number will lack a commit number until the next version is uploaded.  The commit number is always added retroactively as it's generated at the time that I commit the project to the host.  In general, for version number format X.Y.Z:
 * X: increases in this number represent a complete overhaul of some section of the website or source code
 * Y: increases in this number represent a major functional change/aesthetic change to the website
 * Z: increases in this number represent changes that are relatively minor but still warrant a new commit 
