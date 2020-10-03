@@ -25,7 +25,7 @@ The version of this app currently uploaded is 1.1.0.  I do not track updates to 
 * Y: increases in this number represent a major functional change/aesthetic change to the website
 * Z: increases in this number represent changes that are relatively minor but still warrant a new commit 
 
-**v1.1.0**
+**v1.1.0 commit aadb081ec7d98a7bd664aea29736d77291c28b84**
 * Updated CSS to limit maximum image height/width to 400/700px respectively.  Resizing will always preserve the original aspect ratio.  Images within these dimensional limitations will not be resized.  This will keep all images roughly the same size when displayed in the DOM.
 * Updated CSS so that the size of the results box will shrink to meet the size of images contained if said images do not require the box be the full width of the screen.
 * Updated README to credit the [Dog API](https://dog.ceo/dog-api/) for some of their code which I repurposed (see `breeds-list.js`).
@@ -51,27 +51,29 @@ If the user clicks *Let me Choose!*:
 
 Notes:
 
-* The user may click either of the *Mix it Up!* or *Let me choose!* buttons at any time to change which functionality they're in.  The page will re-render the input prompt as necessary.
+* The user may click either of the *Mix it Up!* or *Let me choose!* buttons at any time to change which functionality is active.  The page will re-render the input prompt as necessary.
 * The types of input fields were chosen to eliminate the possibility of invalid user inputs.  Even if the user inputs characters into the numerical search field the app will convert the string to an integer.
 * Details of the search query results can be viewed in the console.
 * The file `breeds-list.js` is not my original work.  I reused a similar field from the source code of the [Dog API](https://dog.ceo/dog-api/) user search interface, though I did reformat it to work properly with my code.
 
 # Tech Framework
 
-This app uses:
-
+**This app uses:**
 * HTML5 and CSS
 * JavaScript ES6
 * jQuery 3.4.1 slim
 
-I built this app using:
-
-* VSCode 1.49.2
+**I built this app using:**
+* [VSCode](https://code.visualstudio.com/) 1.49.2
 * Chrome 85 (for display and DevTools)
-* Postman v7.33.1
-* Git-Bash 2.28.0.1
-* GitHub (online portal, not desktop)
+* [Postman](https://www.postman.com/) v7.33.1
+* [Git-Bash](https://git-scm.com/) 2.28.0.1
+* [GitHub](https://github.com/) (online portal, not desktop)
 * Windows 10 Pro v1909
+
+**This app is stored at:**
+* [GitHub Repo](https://github.com/mhsmith321/Thinkful-Dog-Pictures-App)
+* [Github Hosted Site](https://mhsmith321.github.io/Thinkful-Dog-Pictures-App/)
 
 For an easy time reading the code files I recommend using a code viewer that wraps at no less than 160 characters.
 
@@ -91,6 +93,10 @@ In the future I intend to publish this product to my portfolio.  Prior to doing 
 
 Although I'm always interested in meeting new collaborators I prefer to keep this an individual project as a skills demonstrator.
 
+I'm happy to let anyone reuse my code so long as you contact me for advance permission and give attribution where appropriate.
+
+If you'd like to learn more about the programmer, please visit [my website](https://martysmith.tech/) and [my GitHub Repo](https://github.com/mhsmith321).
+
 # Special Thanks
 
 * My mentor with Thinkful, Vincent Ramdhanie, gave me ample assistance troubleshooting my code where I had issues.
@@ -99,6 +105,7 @@ Although I'm always interested in meeting new collaborators I prefer to keep thi
 * The [Dog API](https://dog.ceo/dog-api/) provided a very nice set of pictures for this app/assignment.
 * I found the [Gorditas](https://fonts.google.com/specimen/Gorditas) font via Google Fonts.  It was created by Gustavo Dipre and Brenda Gallo and made available under the [Open Fonts License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
 * I found the [Open Sans](https://fonts.google.com/specimen/Open+Sans) font via Google Fonts.  It was created by [Steve Matteson](https://twitter.com/@SteveMatteson1) and made available under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+* Additional sources I consulted for troubleshooting include [Stack Overflow](https://stackoverflow.com/), [W3Schools](https://www.w3schools.com/), [Codecademy](https://www.codecademy.com/learn), [CSS-Tricks](https://css-tricks.com/), and of course [Google](https://www.google.com/).
 * Jennifer and Natalie Smith (the programmer's wife and mother, respectively) provided moral support and beta testing.
 
 # Appendix A: Assignment from Thinkful Module 12.5
