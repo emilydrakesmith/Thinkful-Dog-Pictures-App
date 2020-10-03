@@ -19,9 +19,6 @@ h1 {
     margin: auto 0px auto 0px;
 }
 
-main {
-}
-
 #get-dogs-form {
     display: flex;
     flex-direction: column;
@@ -31,7 +28,6 @@ main {
     padding: 25px;
     background-color: #2f0e07;
     border-radius: 10px;
-
 }
 
 #get-dogs-form div {
@@ -49,7 +45,6 @@ main {
     flex-direction: column;
     flex: 2;
     gap: 10px;
-    /*border: 3px solid orange;*/
 }
 
 .input-button {
@@ -116,7 +111,7 @@ main {
     display: none;
 }
 
-@media all and (min-width: 415px) {
+@media all and (min-width: 800px) {
     #user-input-objs {
         flex-direction: row;
     }
@@ -139,11 +134,14 @@ main {
 
     .results-section {
         align-items: center;
+        max-width: 100%;
+        width: fit-content;
     }
 
     .results-section * {
-        height: 100%;
         width: auto;
-        max-width: 100%;
+        height: auto;
+        max-width: 700px;
+        max-height: 400px;
     }
 }

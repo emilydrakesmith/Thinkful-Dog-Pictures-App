@@ -12,7 +12,7 @@ I chose to modify the assignment in a few ways to, in my mind, better follow the
 
 The app utilizes a mobile-first design which is responsive to accomodate larger screens.
 
-No templates were provided as part of the assignment.  This product fully represents my own original work, with outside support and consultation detailed in the *Special Thanks* section.
+No templates were provided as part of the assignment.  This product fully represents my own original work, aside from the contents of the file `breeds-list.js`, with outside support and consultation detailed in the *Special Thanks* section.
 
 This app is also my first project to include a fully-detailed README in its initial commit.
 
@@ -20,11 +20,19 @@ See *Appendix A: Assignment from Thinkful Module 12.5* for more information.
 
 # Version Notes
 
-The version of this app currently uploaded is 1.0.0.  I do not track updates to this README file if there were not associated changes to any other part of the app.
+The version of this app currently uploaded is 1.0.0.  I do not track updates to this README file if there were not associated changes to any other part of the app.  Each version number will lack a commit number until the next version is uploaded.  The commit number is always added retroactively as it's generated at the time that I commit the project to the host.  In general, for version number format X.Y.Z:
+* X: increases in this number represent a complete overhaul of some section of the website or source code
+* Y: increases in this number represent a major functional change/aesthetic change to the website
+* Z: increases in this number represent changes that are relatively minor but still warrant a new commit 
 
-* v1.0.0
+**v1.1.0**
+* Updated CSS to limit maximum image height/width to 400/700px respectively.  Resizing will always preserve the original aspect ratio.  Images within these dimensional limitations will not be resized.  This will keep all images roughly the same size when displayed in the DOM.
+* Updated CSS so that the size of the results box will shrink to meet the size of images contained if said images do not require the box be the full width of the screen.
+* Updated README to credit the [Dog API](https://dog.ceo/dog-api/) for some of their code which I repurposed (see `breeds-list.js`).
+* Updated README with an explanation of how I utilize version numbers.
 
-Initial commit.
+**v1.0.0 commit 8c986f345b805a9978ed49ced3a53436179d4911**
+* Initial commit.
 
 # Instructions for Use
 
@@ -46,6 +54,7 @@ Notes:
 * The user may click either of the *Mix it Up!* or *Let me choose!* buttons at any time to change which functionality they're in.  The page will re-render the input prompt as necessary.
 * The types of input fields were chosen to eliminate the possibility of invalid user inputs.  Even if the user inputs characters into the numerical search field the app will convert the string to an integer.
 * Details of the search query results can be viewed in the console.
+* The file `breeds-list.js` is not my original work.  I reused a similar field from the source code of the [Dog API](https://dog.ceo/dog-api/) user search interface, though I did reformat it to work properly with my code.
 
 # Tech Framework
 
@@ -75,9 +84,7 @@ Complete documenation for the [Dog API](https://dog.ceo/dog-api/) can be found [
 In the future I intend to publish this product to my portfolio.  Prior to doing so I would like to accomplish a few more things:
 
 * Clean up the code in general and possibly create nested functions to slim down the larger functions and reduce code duplications.
-* Alter the size of returned images so that the largest ones are not grossly large compared to the smallest ones.
-* Make the brown background for the results resize smaller when pictures don't occupy a full row.
-* Provide user feedback when the user requests > 50 pictures. The API's will not return more than 50 images even if more are requested.
+* Provide user feedback when the user requests > 50 pictures. The API will not return more than 50 images even if more are requested.
 * Generate alt-text for images returned in the query to increase accessibility.
 
 # Contribute
