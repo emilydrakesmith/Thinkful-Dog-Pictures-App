@@ -1,33 +1,149 @@
 body {
     font-family: sans-serif;
+    background-color: #ffe0b5;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0px 20px 20px;
+    gap: 15px;
+    background-color: #260701;
+    color: #cc945c;
+}
+
+h1 {
+    font-family: 'Gorditas', cursive;
+    margin: auto 0px auto 0px;
 }
 
 main {
-    margin-left: 15px;
 }
 
 #get-dogs-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+    margin: 15px;
+    padding: 25px;
+    background-color: #2f0e07;
+    border-radius: 10px;
+
+}
+
+#get-dogs-form div {
+    width: 100% !important;
 }
 
 #user-input-objs {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
 }
 
 #input-buttons {
     display: flex;
     flex-direction: column;
-    /*flex: 2;*/
+    flex: 2;
+    gap: 10px;
+    /*border: 3px solid orange;*/
+}
+
+.input-button {
+    height: 60px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    color: #260701;
+    background-color: #b07d62;
+    border-radius: 4px;
+}
+
+.add-margin-15px {
+    margin-top: 15px;
 }
 
 #input-field {
     display: flex;
     flex-direction: column;
-    /*flex: 5;*/
+    flex: 5;
+    gap: 5px;
+}
+
+.request-prompt {
+    margin: 5px;
+    color: #d69f7e;
+}
+
+.user-input-box {
+    height: 40px;
+    padding-left: 10px;
+    font-size: 25px;
+    background-color: #fff1e6;
+}
+
+#btn-submit {
+/*    margin: 10px 10px 0px 10px;*/
+    width: 80%;
+    height: 45px;
+    margin-top: 20px;
+    font-family: 'Gorditas', cursive;
+    font-size: 22px;
+    color: #260701;
+    background-color: #b07d62;
+
+}
+
+.results-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 15px;
+    padding: 15px;
+    gap: 15px;
+    background-color: #2f0e07;
+    border-radius: 10px;
+}
+
+.results-section * {
+    width: 100%;
 }
 
 .hide {
-    visibility: hidden;
+    display: none;
+}
+
+@media all and (min-width: 415px) {
+    #user-input-objs {
+        flex-direction: row;
+    }
+
+    .input-button {
+        font-size: 30px;
+    }
+
+    .request-prompt {
+        font-size: 22px;
+    }
+
+    .add-margin-15px {
+        margin: 15px;
+    }
+
+    #btn-submit {
+        margin-top: 15px;
+    }
+
+    .results-section {
+        align-items: center;
+    }
+
+    .results-section * {
+        height: 100%;
+        width: auto;
+        max-width: 100%;
+    }
 }
