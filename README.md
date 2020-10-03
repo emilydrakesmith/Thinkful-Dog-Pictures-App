@@ -25,13 +25,13 @@ The version of this app currently uploaded is 1.1.0.  I do not track updates to 
 * Y: increases in this number represent a major functional change/aesthetic change to the website
 * Z: increases in this number represent changes that are relatively minor but still warrant a new commit 
 
-**v1.1.0 commit aadb081ec7d98a7bd664aea29736d77291c28b84**
+**v1.1.0 | 03 October 2020 | commit aadb081ec7d98a7bd664aea29736d77291c28b84**
 * Updated CSS to limit maximum image height/width to 400/700px respectively.  Resizing will always preserve the original aspect ratio.  Images within these dimensional limitations will not be resized.  This will keep all images roughly the same size when displayed in the DOM.
 * Updated CSS so that the size of the results box will shrink to meet the size of images contained if said images do not require the box be the full width of the screen.
 * Updated README to credit the [Dog API](https://dog.ceo/dog-api/) for some of their code which I repurposed (see `breeds-list.js`).
 * Updated README with an explanation of how I utilize version numbers.
 
-**v1.0.0 commit 8c986f345b805a9978ed49ced3a53436179d4911**
+**v1.0.0 | 02 October 2020 | commit 8c986f345b805a9978ed49ced3a53436179d4911**
 * Initial commit.
 
 # Instructions for Use
