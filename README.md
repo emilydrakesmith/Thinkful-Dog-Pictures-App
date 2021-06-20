@@ -1,38 +1,24 @@
+<a id='top'></a>
+
 # Introduction
 
-This project is an assignment for my Thinkful curriculum, *Module 12.5: Asynchronous web apps / Simple GET requests*.  The purpose is to practice making a successful GET request and using the returned data productively.
-
-The essential goals as enumerated in the assignment are:
-
-1. Create an app that lets users display up to 50 random dog images from the [Dog API](https://dog.ceo/dog-api/) and print the results to the console.
-2. Expand the app to display the returned images in the DOM.
-3. Create an additional app to allow users to retrieve a single image of a dog of a chosen breed.
-
-I chose to modify the assignment in a few ways to, in my mind, better follow the spirit of the assignment while achieving a more streamlined and visually appealing product.  I created one single app which accomplishes both core functions; the mechanisms to switch between functions is intuitive and doing so is very easy.  All results are printed to the console.
-
-The app utilizes a mobile-first design which is responsive to accomodate larger screens.
-
-No templates were provided as part of the assignment.  This product fully represents my own original work, aside from the contents of the file `breeds-list.js`, with outside support and consultation detailed in the *Special Thanks* section.
-
-This app is also my first project to include a fully-detailed README in its initial commit.
+This project is an assignment for my Thinkful curriculum, *Module 12.5: Asynchronous web apps / Simple GET requests*.  The purpose is to practice making a successful GET request and using the returned data productively.  [Click here to launch the app!](https://mhsmith321.github.io/Thinkful-Dog-Pictures-App/)
 
 See *Appendix A: Assignment from Thinkful Module 12.5* for more information.
 
-# Version Notes
+# Table of Contents
+1. [Instructions for Use](#instructions)
+2. [Version Notes](#version-notes)
+3. [Tech Framework](#tech-framework)
+4. [API Documentation](#api-documentation)
+5. [Future Plans](#future-plans)
+6. [Contribute](#contribute)
+7. [Special Thanks](#special-thanks)
+8. [Appendices](#appendices)
+   1. [Appendix A: Assignment from Thinkful Module 12.5](#appendix-a)
 
-The version of this app currently uploaded is 1.1.0.  In cases where I update the README without any updates to the website itself I do not update the version number or use branches for my work.  Each version number will lack a commit number until the next version is uploaded.  The commit number is always added retroactively as it's generated at the time that I commit the project to the host.  In general, for version number format X.Y.Z:
-* X: increases in this number represent a complete overhaul of some section of the website or source code
-* Y: increases in this number represent a major functional change/aesthetic change to the website
-* Z: increases in this number represent changes that are relatively minor but still warrant a new commit 
-
-**v1.1.0 | 03 October 2020 | commit aadb081ec7d98a7bd664aea29736d77291c28b84**
-* Updated CSS to limit maximum image height/width to 400/700px respectively.  Resizing will always preserve the original aspect ratio.  Images within these dimensional limitations will not be resized.  This will keep all images roughly the same size when displayed in the DOM.
-* Updated CSS so that the size of the results box will shrink to meet the size of images contained if said images do not require the box be the full width of the screen.
-* Updated README to credit the [Dog API](https://dog.ceo/dog-api/) for some of their code which I repurposed (see `breeds-list.js`).
-* Updated README with an explanation of how I utilize version numbers.
-
-**v1.0.0 | 02 October 2020 | commit 8c986f345b805a9978ed49ced3a53436179d4911**
-* Initial commit.
+[Back to Top](#top)
+<a id='instructions'></a>
 
 # Instructions for Use
 
@@ -56,6 +42,35 @@ Notes:
 * Details of the search query results can be viewed in the console.
 * The file `breeds-list.js` is not my original work.  I reused a similar field from the source code of the [Dog API](https://dog.ceo/dog-api/) user search interface, though I did reformat it to work properly with my code.
 
+[Back to Top](#top)
+<a id='version-notes'></a>
+
+# Version Notes
+
+The version of this app currently uploaded is 1.1.0.  In cases where I update the README without any updates to the website itself I do not update the version number or use branches for my work.  Each version number will lack a commit number until the next version is uploaded.  The commit number is always added retroactively as it's generated at the time that I commit the project to the host.  In general, for version number format X.Y.Z:
+* X: increases in this number represent a complete overhaul of some section of the website or source code
+* Y: increases in this number represent a major functional change/aesthetic change to the website
+* Z: increases in this number represent changes that are relatively minor but still warrant a new commit 
+
+#### v 1.1.0 | 03 October 2020 | commit aadb081ec7d98a7bd664aea29736d77291c28b84
+* Updated CSS to limit maximum image height/width to 400/700px respectively.  Resizing will always preserve the original aspect ratio.  Images within these dimensional limitations will not be resized.  This will keep all images roughly the same size when displayed in the DOM.
+* Updated CSS so that the size of the results box will shrink to meet the size of images contained if said images do not require the box be the full width of the screen.
+* Updated README to credit the [Dog API](https://dog.ceo/dog-api/) for some of their code which I repurposed (see `breeds-list.js`).
+* Updated README with an explanation of how I utilize version numbers.
+
+#### v 1.0.0 | 02 October 2020 | commit 8c986f345b805a9978ed49ced3a53436179d4911
+* Initial commit.
+
+#### v 1.0.0 | 20 June 2021 | commit -- | Current Version
+* **Important!**  This was one of my earliest projects which I'm going back into months later.  While in many of my early projects I've more recently cleaned up the `README.md` files including version notes, I did not leave myself enough information in previous commit messages to do that.  Since this is a relatively minor project I'm only going to keep new version notes going forward and do not intend to rebuild prior ones from the detailed commit change logs.
+* Reformatted *Version Notes* in `README.md` to use `####` tagging rather than boldface.
+* Added a link to the live app at the top of the `README.md` file.
+* Moved *Instructions for Use* about *Version Notes* in the `README.md` file.
+* Added a *Table of Contents* and periodic links to the top of the page in the `README.md` file.
+
+[Back to Top](#top)
+<a id='tech-framework'></a>
+
 # Tech Framework
 
 **This app uses:**
@@ -77,9 +92,15 @@ Notes:
 
 For an easy time reading the code files I recommend using a code viewer that wraps at no less than 160 characters.
 
+[Back to Top](#top)
+<a id='api-documentation'></a>
+
 # API Documentation
 
 Complete documenation for the [Dog API](https://dog.ceo/dog-api/) can be found [here](https://dog.ceo/dog-api/documentation/).
+
+[Back to Top](#top)
+<a id='future-plans'></a>
 
 # Future Plans
 
@@ -89,6 +110,9 @@ In the future I intend to publish this product to my portfolio.  Prior to doing 
 * Provide user feedback when the user requests > 50 pictures. The API will not return more than 50 images even if more are requested.
 * Generate alt-text for images returned in the query to increase accessibility.
 
+[Back to Top](#top)
+<a id='contribute'></a>
+
 # Contribute
 
 Although I'm always interested in meeting new collaborators I prefer to keep this an individual project as a skills demonstrator.
@@ -96,6 +120,9 @@ Although I'm always interested in meeting new collaborators I prefer to keep thi
 I'm happy to let anyone reuse my code so long as you contact me for advance permission and give attribution where appropriate.
 
 If you'd like to learn more about the programmer, please visit [my website](https://martysmith.tech/) and [my GitHub Repo](https://github.com/mhsmith321).
+
+[Back to Top](#top)
+<a id='special-thanks'></a>
 
 # Special Thanks
 
@@ -108,7 +135,15 @@ If you'd like to learn more about the programmer, please visit [my website](http
 * Additional sources I consulted for troubleshooting include [Stack Overflow](https://stackoverflow.com/), [W3Schools](https://www.w3schools.com/), [Codecademy](https://www.codecademy.com/learn), [CSS-Tricks](https://css-tricks.com/), and of course [Google](https://www.google.com/).
 * Jennifer and Natalie Smith (the programmer's wife and mother, respectively) provided moral support and beta testing.
 
-# Appendix A: Assignment from Thinkful Module 12.5
+[Back to Top](#top)
+<a id='appendices'></a>
+
+# Appendices
+
+[Back to Top](#top)
+<a id='appendix-a'></a>
+
+## Appendix A: Assignment from Thinkful Module 12.5
 
 1. Create an app that lets users choose to display between 1 and 50 random dog images, then prints the results to the console. The app should feature a form with a required input where users indicate the number of images to retrieve, and the input should default to `3`. Use the endpoint described in the "DISPLAY MULTIPLE RANDOM IMAGES FROM ALL DOGS COLLECTION" section of [this page of the DogAPI docs](https://dog.ceo/dog-api/documentation/random).
 
