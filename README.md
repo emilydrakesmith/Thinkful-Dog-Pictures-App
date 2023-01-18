@@ -2,7 +2,7 @@
 
 # Introduction
 
-This project is an assignment for my Thinkful curriculum, *Module 12.5: Asynchronous web apps / Simple GET requests*.  The purpose is to practice making a successful GET request and using the returned data productively.  [Click here to launch the app!](https://mhsmith321.github.io/Thinkful-Dog-Pictures-App/)
+This project is an assignment for my Thinkful curriculum, *Module 12.5: Asynchronous web apps / Simple GET requests*.  The purpose is to practice making a successful GET request and using the returned data productively.  [Click here to launch the app!](https://emilydrakesmith.github.io/Thinkful-Dog-Pictures-App/)
 
 See *Appendix A: Assignment from Thinkful Module 12.5* for more information.
 
@@ -119,7 +119,7 @@ Although I'm always interested in meeting new collaborators I prefer to keep thi
 
 I'm happy to let anyone reuse my code so long as you contact me for advance permission and give attribution where appropriate.
 
-If you'd like to learn more about the programmer, please visit [my website](https://martysmith.tech/) and [my GitHub Repo](https://github.com/mhsmith321).
+If you'd like to learn more about the programmer, please visit [my website](https://www.emilysmith.tech/) and [my GitHub Repo](https://github.com/emilydrakesmith).
 
 [Back to Top](#top)
 <a id='special-thanks'></a>
